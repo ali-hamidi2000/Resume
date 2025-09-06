@@ -1,312 +1,1854 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Hamidi - AI Developer & Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#5D5CDE',
+                        'dark-bg': '#181818',
+                        'light-bg': '#FFFFFF',
+                        'glass': 'rgba(255, 255, 255, 0.1)',
+                        'glass-dark': 'rgba(0, 0, 0, 0.1)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'bounce-in': 'bounceIn 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(-100px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+                        'apple': '0 4px 20px 0 rgba(0, 0, 0, 0.1)',
+                        'apple-hover': '0 8px 30px 0 rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
 
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Ali Hamidi</title>
-    </head>
-    <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Ali Hamidi</a>
-        </div>
-
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
-            </li>
-            <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
-        </div>
-      </nav>
-    </header>
-
-    <main class="l-main">
-      <!--===== HOME =====-->
-      <section class="home bd-grid" id="home">
-        <div class="home__data">
-          <h1 class="home__title">
-            Hi,<br />I'am <span class="home__title-color">Ali Hamidi</span><br />
-            AI Developer
-          </h1>
-
-          <a href="#" class="button">Hire me</a>
-        </div>
-
-        <div class="home__social">
-          <a href="https://www.linkedin.com/in/ali-hamidi2000/" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/ali-hamidi2000/" class="home__social-icon"><i class="bx bxl-github"></i></a>
-          <a href="https://wa.me/+989367030828" class="home__social-icon"><i class="bx bxl-whatsapp"></i></a>
-          <a href="https://www.instagram.com/ali.mr100/" class="home__social-icon"><i class="bx bxl-instagram"></i></a>
-          <a href="https://t.me/frxfx" class="home__social-icon"><i class="bx bxl-telegram"></i></a>
-        </div>
-
-        <div class="home__img">
-          <svg
-            class="home__blob"
-            viewBox="0 0 479 467"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-              <image
-                class="home__blob-img"
-                x="105"
-                y="50"
-                href="assets/img/IMG_0044.png"
-              />
-            </g>
-          </svg>
-        </div>
-      </section>
-
-      <!--===== ABOUT =====-->
-      <section class="about section" id="about">
-        <h2 class="section-title">About</h2>
-
-        <div class="about__container bd-grid">
-          <div class="about__img">
-            <img src="assets/img/site-pic.png" alt="" />
-          </div>
-
-          <div>
-            <h2 class="about__subtitle">I'am Ali</h2>
-            <p class="about__text">
-             I am a software engineer , ML and Vision developer. Bachelor's degree focused in Computer Science from Qazvin Azad University(QIAU).</p>
-              <br>
-                <p>I am really interested in working in the fields of artificial intelligence, machine learning, and data science...</p>
-              
-            
-          </div>
-        </div>
-      </section>
-
-      <!--===== SKILLS =====-->
-      <section class="skills section" id="skills">
-        <h1 class="section-title">Skills</h1>
-
-        <div class="skills__container bd-grid">
-          <div>
-            <h2 class="skills__subtitle">Profesional Skills:</h2>
-            <p class="skills__text">
-            </p>
-            <div class="skills__data">
-              <div class="skills__names">
-                <span class="skills__name">Python</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-bar {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 4px;
+            border-radius: 2px;
+            transition: width 2s ease-in-out;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .dark .nav-blur {
+            background: rgba(24, 24, 24, 0.8);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform-origin: left;
+            z-index: 9999;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        
+        .floating-shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .experience-timeline {
+            position: relative;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .dark .contact-input {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .dark .contact-input:focus {
+            background: rgba(0, 0, 0, 0.3);
+            border-color: #667eea;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+            margin: 80px 0;
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .social-icon:hover::before {
+            left: 100%;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certification-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certification-badge::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            z-index: -1;
+            animation: gradient 3s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        .language-progress {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .language-fill {
+            height: 8px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            position: relative;
+        }
+        
+        .language-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .hero-background {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .mobile-menu {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .dark .mobile-menu {
+            background: rgba(24, 24, 24, 0.95);
+        }
+        
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px) scale(1.02);
+        }
+        
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .testimonial-card:hover::before {
+            left: 100%;
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .dark .theme-toggle {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-10px);
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-level {
+            width: 100px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            transition: width 2s ease-in-out;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-item:hover .project-image::before {
+            opacity: 1;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 30px;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .footer-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-light-bg dark:bg-dark-bg text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gradient">Ali Hamidi</h1>
+                </div>
                 
-                <span class="skills__name">Machine Learning (Supervised,unsupervised,reinforcement)</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <span class="skills__name">Computer Vision, Image processing</span>
-              </div>
-              <div class="skills__bar skills__ux"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <span class="skills__name">Data Science (Data Analysis, Data mining,...)</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">mathematics for artificial intelligence (Linear Algebra,...)
-                <span class="skills__name"></span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">Numpy, Pandas, seaborn, matplotlib, tensorflow,...
-                <span class="skills__name"></span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <br/>
-                  <span   class="skills__name">C++</span>
-              </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <span class="skills__name">Network Engineering (Network+, Cisco)</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">About</a>
+                        <a href="#experience" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Experience</a>
+                        <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Projects</a>
+                        <a href="#education" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Education</a>
+                        <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium hover:text-primary transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
                 
-                <span class="skills__name">SQL (My SQL)</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="theme-toggle p-2 rounded-lg">
+                        <i class="bx bx-moon text-lg"></i>
+                    </button>
+                    
+                    <div class="md:hidden">
+                        <button id="mobileMenuBtn" class="p-2 rounded-lg glass-effect">
+                            <i class="bx bx-menu text-lg"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <span class="skills__name">R (Programming Language)</span>
-              </div>
-              <div class="skills__bar skills__ux"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">Git, Github
-                <span class="skills__name"></span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">WordPress
-                <span class="skills__name"></span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage"></span>
-              </div>
-            </div>
-          </div>
-          </div>
         </div>
-      </section>
+        
+        <div id="mobileMenu" class="md:hidden hidden mobile-menu border-t border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium">About</a>
+                <a href="#experience" class="mobile-nav-link block px-3 py-2 text-base font-medium">Experience</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 text-base font-medium">Skills</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#education" class="mobile-nav-link block px-3 py-2 text-base font-medium">Education</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-      <!--===== WORK =====-->
-      <section class="work section" id="work">
-        <h2 class="section-title">Work</h2>
-
-        <div class="work__container bd-grid">
-            <a href="" class="work__img">
-                <img src="assets/img/work1.jpg" alt="">
-            </a>
-            <a href="" class="work__img">
-                <img src="assets/img/work2.jpg" alt="">
-            </a>
-            <a href="" class="work__img">
-                <img src="assets/img/work3.jpg" alt="">
-            </a>
-            <a href="" class="work__img">
-                <img src="assets/img/work4.jpg" alt="">
-            </a>
-            <a href="" class="work__img">
-                <img src="assets/img/work5.jpg" alt="">
-            </a>
-            <a href="" class="work__img">
-                <img src="assets/img/work6.jpg" alt="">
+    <section id="home" class="min-h-screen hero-background flex items-center justify-center relative overflow-hidden">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6">
+                        Hi, I'm <span class="typing-effect">Ali Hamidi</span>
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-light text-white/90 mb-8">
+                        AI Developer & Software Engineer
+                    </h2>
+                    <p class="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
+                        Passionate Master's student specializing in Artificial Intelligence with extensive programming skills across Python, JavaScript, C++, and cutting-edge technologies.
+                    </p>
+                </div>
+                
+                <div class="animate-slide-up flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-apple-hover">
+                        <span>Get In Touch</span>
+                        <i class="bx bx-right-arrow-alt ml-2 text-xl"></i>
+                    </a>
+                    <a href="#projects" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105">
+                        <span>View My Work</span>
+                        <i class="bx bx-code-alt ml-2 text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="animate-bounce-in mt-16 flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/ali-hamidi2000/" target="_blank" class="social-icon p-4 glass-effect rounded-full text-white hover:text-primary transition-all duration-300">
+                        <i class="bx bxl-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/ali-hamidi2000/" target="_blank" class="social-icon p-4 glass-effect rounded-full text-white hover:text-primary transition-all duration-300">
+                        <i class="bx bxl-github text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/+989367030828" target="_blank" class="social-icon p-4 glass-effect rounded-full text-white hover:text-primary transition-all duration-300">
+                        <i class="bx bxl-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ali.mr100/" target="_blank" class="social-icon p-4 glass-effect rounded-full text-white hover:text-primary transition-all duration-300">
+                        <i class="bx bxl-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/frxfx" target="_blank" class="social-icon p-4 glass-effect rounded-full text-white hover:text-primary transition-all duration-300">
+                        <i class="bx bxl-telegram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/60 hover:text-white transition-colors duration-300">
+                <i class="bx bx-chevron-down text-3xl"></i>
             </a>
         </div>
     </section>
 
-      <!--===== CONTACT =====-->
-      <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input
-              type="button"
-              value="SEND"
-              class="contact__button button"
-            />
-          </form>
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">About Me</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    A creative and passionate software engineer with a proven ability to deliver projects on time while applying innovative solutions.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-slide-in">
+                    <div class="glass-effect rounded-3xl p-8 hover-lift">
+                        <div class="w-64 h-64 mx-auto mb-8 relative">
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-primary to-purple-600 p-2">
+                                <div class="w-full h-full rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+                                    <i class="bx bx-user text-8xl text-gray-600 dark:text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-4">Software & Web Developer</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                Bachelor's degree in Computer Science from Qazvin Islamic Azad University (QIAU)
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="glass-effect rounded-xl p-4">
+                                    <div class="stats-counter">3+</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+                                </div>
+                                <div class="glass-effect rounded-xl p-4">
+                                    <div class="stats-counter">15+</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-gradient">My Journey</h3>
+                        <div class="space-y-4 text-lg leading-relaxed">
+                            <p class="text-gray-700 dark:text-gray-300">
+                                I am a software engineer, ML and Vision developer with a Bachelor's degree focused in Computer Science from Qazvin Islamic Azad University (QIAU).
+                            </p>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                I am really interested in working in the fields of artificial intelligence, machine learning, and data science. My passion for technology drives me to continuously learn and adapt to new methodologies and emerging technologies.
+                            </p>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Currently pursuing my Master's degree in AI Engineering, I combine academic excellence with practical experience, having worked on various projects ranging from web development to complex AI implementations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="achievement-card rounded-2xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                    <i class="bx bx-brain text-white text-xl"></i>
+                                </div>
+                                <h4 class="font-semibold">AI Specialist</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Expert in machine learning, computer vision, and deep learning technologies
+                            </p>
+                        </div>
+                        
+                        <div class="achievement-card rounded-2xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="bx bx-code text-white text-xl"></i>
+                                </div>
+                                <h4 class="font-semibold">Full Stack</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Proficient in both frontend and backend development with modern frameworks
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <!--===== FOOTER =====-->
-    <footer class="footer">
-      <p class="footer__title">Ali Hamidi</p>
-      <div class="footer__social">
-        <a href="https://www.linkedin.com/in/ali-hamidi2000/" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/ali-hamidi2000/" class="footer__icon"><i class="bx bxl-github"></i></a>
-        <a href="https://wa.me/+989367030828" class="footer__icon"><i class="bx bxl-whatsapp"></i></a>
-        <a href="https://www.instagram.com/ali.mr100/" class="footer__icon"><i class="bx bxl-instagram"></i></a>
-        <a href="https://t.me/frxfx" class="footer__icon"><i class="bx bxl-telegram"></i></a>
-      </div>
-      <p class="footer__copy"> </p>
+    <div class="section-divider"></div>
+
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">Experience</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    My professional journey in software development and artificial intelligence
+                </p>
+            </div>
+            
+            <div class="experience-timeline max-w-4xl mx-auto">
+                <div class="timeline-item animate-slide-in">
+                    <div class="glass-effect rounded-2xl p-8 hover-lift">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gradient">Python and Web Developer</h3>
+                            <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">May 2023 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">Qazvin Science and Technology Park</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Working as part of a dynamic team on software and web development projects. Responsibilities include designing, developing, and delivering innovative solutions, negotiating contracts with companies, and managing projects remotely.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Remote Work</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in">
+                    <div class="glass-effect rounded-2xl p-8 hover-lift">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gradient">Django Developer</h3>
+                            <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">June 2023 - Sep 2023</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">Telecommunications Company of Iran (TCI)</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Gained hands-on experience in developing with Django for employee system management at Iran's main fixed-line operator, providing fixed-line, DSL, and voice services.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Employee Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in">
+                    <div class="glass-effect rounded-2xl p-8 hover-lift">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gradient">Python Developer</h3>
+                            <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Jan 2021 - Oct 2024</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">SYNTECH Technology and Innovation Center</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Involved in developing innovative solutions in various technology areas at the intersection of robotics, mechanics, artificial intelligence, software development, and design at Qazvin Azad University.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI Development</span>
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">Skills & Expertise</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    A comprehensive overview of my technical skills and professional capabilities
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-brain text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Artificial Intelligence</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Machine Learning</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Deep Learning</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Computer Vision</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">TensorFlow/Keras</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">PyTorch</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-code-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Programming Languages</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Python</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">JavaScript</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">C++</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">R</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">SQL</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-globe text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Web Development</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Django</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Flask</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">React</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">HTML/CSS</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">REST API</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-data text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Data Science</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Pandas</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">NumPy</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Matplotlib</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Seaborn</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Data Mining</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-network-chart text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Other Technologies</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Git/GitHub</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Docker</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">MongoDB</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">PostgreSQL</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Network Engineering</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="bx bx-world text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Languages</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <span class="font-medium">Persian (Native)</span>
+                            <div class="language-progress">
+                                <div class="language-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">English (Professional)</span>
+                            <div class="language-progress">
+                                <div class="language-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Turkish (Limited)</span>
+                            <div class="language-progress">
+                                <div class="language-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="font-medium">Arabic (Limited)</span>
+                            <div class="language-progress">
+                                <div class="language-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">Featured Projects</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    A showcase of my work spanning AI development, web applications, and innovative solutions
+                </p>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-face-mask text-6xl text-white"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SOLD</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Smart Facial Recognition System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Developed a smart system for registering employee entry and exit using facial recognition. Available as both web application and desktop version with smart voice assistant.
+                        </p>
+                        <p class="text-sm text-green-600 font-semibold mb-4">
+                            Sold to: Defense Industries Organization, Islamic Republic of Iran Army
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite3</span>
+                            <span class="tech-tag">AJAX</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-user-check text-6xl text-white"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SOLD</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Employee Management System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Web-based application built using Django that allows users to manage employee information effectively with features to add, update, delete, and search employee records.
+                        </p>
+                        <p class="text-sm text-green-600 font-semibold mb-4">
+                            Sold to: Telecommunications Company of Iran (TCI)
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">SQLite3</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-car text-6xl text-white"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SOLD</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Iranian License Plate Recognition</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Advanced model with 99% accuracy trained on 30,000 images. Features web and desktop versions with intelligent voice assistant and detailed vehicle information recording.
+                        </p>
+                        <p class="text-sm text-green-600 font-semibold mb-4">
+                            Sold to: Alumtech Company, Traffic Police
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Classification</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-calendar-heart text-6xl text-white"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SOLD</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Medical Appointment System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Web application for medical appointment booking based on Flask with reservation control system that prevents duplicate or filled reservations.
+                        </p>
+                        <p class="text-sm text-green-600 font-semibold mb-4">
+                            Sold to: Provincial Hospitals
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AJAX</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-home-heart text-6xl text-white"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Smart Poultry Farm Project</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Web application for managing IoT-equipped poultry farms with intelligent monitoring and control of sensors, enabling real-time condition oversight.
+                        </p>
+                        <p class="text-sm text-blue-600 font-semibold mb-4">
+                            University Project - Qazvin Azad University
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">FPGA</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item animate-slide-up">
+                    <div class="project-image relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="bx bx-line-chart text-6xl text-white"></i>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SOLD</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="text-xl font-bold mb-3">Gas Consumption Prediction</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            ML study predicting future household gas consumption for 100,000 consumers using neural networks to identify consumption trends and detect fraudulent activities.
+                        </p>
+                        <p class="text-sm text-green-600 font-semibold mb-4">
+                            Sold to: Tavanir and National Iranian Gas Company (NIGC)
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">ARIMA</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="education" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">Education & Certifications</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    My academic background and professional certifications in computer science and AI
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-gradient mb-8">Education</h3>
+                    
+                    <div class="glass-effect rounded-2xl p-8 hover-lift animate-slide-in">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="bx bx-graduation text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold mb-2">Master's in AI Engineering</h4>
+                                <p class="text-primary font-semibold mb-2">Qazvin Islamic Azad University</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">2024 - Present</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Advanced studies in artificial intelligence, machine learning, and deep learning technologies with focus on practical applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-8 hover-lift animate-slide-in">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="bx bx-code-alt text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold mb-2">Bachelor of Computer Engineering</h4>
+                                <p class="text-primary font-semibold mb-2">Qazvin Islamic Azad University (QIAU)</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">2020 - 2024</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Specialized in Software Engineering with comprehensive study of computer science fundamentals, programming, and software development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-gradient mb-8">Certifications</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="certification-badge rounded-2xl p-6 text-white animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">Deep Learning with PyTorch: Image Segmentation</h4>
+                                <i class="bx bx-badge-check text-2xl"></i>
+                            </div>
+                            <p class="text-sm opacity-90 mb-2">Coursera - DeepLearning.ai</p>
+                            <p class="text-xs opacity-80">Advanced techniques in computer vision and image processing</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6 hover-lift animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">Supervised Machine Learning</h4>
+                                <i class="bx bx-badge text-primary text-2xl"></i>
+                            </div>
+                            <p class="text-primary text-sm mb-2">DeepLearning.ai</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs">Comprehensive course on supervised learning algorithms and applications</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6 hover-lift animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">Unsupervised, Recommenders, Reinforcement Learning</h4>
+                                <i class="bx bx-badge text-primary text-2xl"></i>
+                            </div>
+                            <p class="text-primary text-sm mb-2">DeepLearning.ai</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs">Advanced machine learning techniques and recommendation systems</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6 hover-lift animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">Python Intermediate</h4>
+                                <i class="bx bx-badge text-primary text-2xl"></i>
+                            </div>
+                            <p class="text-primary text-sm mb-2">Sololearn</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs">Advanced Python programming concepts and best practices</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6 hover-lift animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">JavaScript Intermediate</h4>
+                                <i class="bx bx-badge text-primary text-2xl"></i>
+                            </div>
+                            <p class="text-primary text-sm mb-2">Sololearn</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs">Modern JavaScript development and frameworks</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6 hover-lift animate-slide-up">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg">SQL Intermediate</h4>
+                                <i class="bx bx-badge text-primary text-2xl"></i>
+                            </div>
+                            <p class="text-primary text-sm mb-2">Sololearn</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs">Database design, optimization, and advanced SQL queries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl sm:text-5xl font-bold mb-6">Get In Touch</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Let's collaborate on your next project. I'm always open to discussing new opportunities and innovative ideas.
+                </p>
+            </div>
+            
+            <div class="contact-section relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="animate-slide-in">
+                        <h3 class="text-3xl font-bold mb-8 text-gradient">Let's Connect</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 p-4 glass-effect rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                    <i class="bx bx-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Phone</p>
+                                    <p class="text-gray-600 dark:text-gray-400">+98-936-703-0828</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 p-4 glass-effect rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                    <i class="bx bx-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-gray-600 dark:text-gray-400">official.alihamidi@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 p-4 glass-effect rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                    <i class="bx bx-map text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Location</p>
+                                    <p class="text-gray-600 dark:text-gray-400">Third floor, Marefat 2 alley, Mollasadra Blvd, Qazvin</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/ali-hamidi2000/" target="_blank" class="social-icon p-3 glass-effect rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                                    <i class="bx bxl-linkedin text-xl"></i>
+                                </a>
+                                <a href="https://github.com/ali-hamidi2000/" target="_blank" class="social-icon p-3 glass-effect rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                                    <i class="bx bxl-github text-xl"></i>
+                                </a>
+                                <a href="https://wa.me/+989367030828" target="_blank" class="social-icon p-3 glass-effect rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                                    <i class="bx bxl-whatsapp text-xl"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ali.mr100/" target="_blank" class="social-icon p-3 glass-effect rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                                    <i class="bx bxl-instagram text-xl"></i>
+                                </a>
+                                <a href="https://t.me/frxfx" target="_blank" class="social-icon p-3 glass-effect rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                                    <i class="bx bxl-telegram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-slide-up">
+                        <form class="contact-form rounded-2xl p-8 space-y-6" id="contactForm">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="contact-input w-full px-4 py-3 rounded-lg text-base focus:ring-2 focus:ring-primary transition-all duration-300" placeholder="Your Name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="contact-input w-full px-4 py-3 rounded-lg text-base focus:ring-2 focus:ring-primary transition-all duration-300" placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="contact-input w-full px-4 py-3 rounded-lg text-base focus:ring-2 focus:ring-primary transition-all duration-300" placeholder="Project Discussion">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="contact-input w-full px-4 py-3 rounded-lg text-base focus:ring-2 focus:ring-primary transition-all duration-300 resize-none" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-primary transition-all duration-300 transform hover:scale-105 hover:shadow-apple-hover">
+                                <span class="flex items-center justify-center">
+                                    <span>Send Message</span>
+                                    <i class="bx bx-send ml-2 text-lg"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section text-white py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-4">Ali Hamidi</h3>
+                <p class="text-lg opacity-90 mb-8">AI Developer & Software Engineer</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.linkedin.com/in/ali-hamidi2000/" target="_blank" class="social-icon p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                        <i class="bx bxl-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/ali-hamidi2000/" target="_blank" class="social-icon p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                        <i class="bx bxl-github text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/+989367030828" target="_blank" class="social-icon p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                        <i class="bx bxl-whatsapp text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ali.mr100/" target="_blank" class="social-icon p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                        <i class="bx bxl-instagram text-xl"></i>
+                    </a>
+                    <a href="https://t.me/frxfx" target="_blank" class="social-icon p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+                        <i class="bx bxl-telegram text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-white/20 pt-8">
+                    <p class="opacity-70">&copy; 2024 Ali Hamidi. All rights reserved.</p>
+                    <p class="opacity-70 mt-2">Built with passion and cutting-edge technology</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="bx bx-up-arrow-alt text-xl"></i>
+    </div>
 
-    <!--===== MAIN JS =====-->
-    <script src="js\main.js"></script>
-  </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const scrollToTop = document.getElementById('scrollToTop');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const themeToggle = document.getElementById('themeToggle');
+            const contactForm = document.getElementById('contactForm');
+            
+            function updateScrollIndicator() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                scrollIndicator.style.transform = `scaleX(${scrollPercent / 100})`;
+                
+                if (scrollTop > 300) {
+                    scrollToTop.classList.add('visible');
+                } else {
+                    scrollToTop.classList.remove('visible');
+                }
+            }
+
+            window.addEventListener('scroll', updateScrollIndicator);
+
+            scrollToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            function setActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPos = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-primary');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('text-primary');
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', setActiveNavLink);
+
+            themeToggle.addEventListener('click', function() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                const icon = themeToggle.querySelector('i');
+                icon.className = isDark ? 'bx bx-sun text-lg' : 'bx bx-moon text-lg';
+                
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                themeToggle.querySelector('i').className = 'bx bx-sun text-lg';
+            }
+
+            function animateSkillBars() {
+                const skillBars = document.querySelectorAll('.skill-fill, .language-fill');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const bar = entry.target;
+                            const width = bar.style.width;
+                            bar.style.width = '0%';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 500);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                skillBars.forEach(bar => observer.observe(bar));
+            }
+
+            animateSkillBars();
+
+            function animateElements() {
+                const elements = document.querySelectorAll('.animate-slide-up, .animate-slide-in, .animate-fade-in, .animate-bounce-in');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0) translateX(0) scale(1)';
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                elements.forEach(element => {
+                    element.style.opacity = '0';
+                    element.style.transition = 'all 0.8s ease-out';
+                    observer.observe(element);
+                });
+            }
+
+            animateElements();
+
+            const typewriterElement = document.querySelector('.typing-effect');
+            if (typewriterElement) {
+                const text = 'Ali Hamidi';
+                const speed = 150;
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < text.length) {
+                        typewriterElement.textContent = text.substring(0, i + 1);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+                
+                setTimeout(typeWriter, 1000);
+            }
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<div class="loading-spinner mx-auto"></div>';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<span class="flex items-center justify-center"><span>Message Sent!</span><i class="bx bx-check ml-2 text-lg"></i></span>';
+                    submitBtn.classList.add('bg-green-500');
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.classList.remove('bg-green-500');
+                        submitBtn.disabled = false;
+                        contactForm.reset();
+                    }, 2000);
+                }, 2000);
+            });
+
+            function createParticles() {
+                const particleContainer = document.createElement('div');
+                particleContainer.className = 'fixed inset-0 pointer-events-none z-0';
+                document.body.appendChild(particleContainer);
+                
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.width = Math.random() * 4 + 2 + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 8 + 's';
+                    particle.style.animationDuration = Math.random() * 10 + 8 + 's';
+                    particleContainer.appendChild(particle);
+                }
+            }
+            
+            createParticles();
+
+            function addHoverEffects() {
+                const hoverElements = document.querySelectorAll('.hover-lift, .project-item, .achievement-card, .skill-category');
+                
+                hoverElements.forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-10px) scale(1.02)';
+                        this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0) scale(1)';
+                        this.style.boxShadow = '';
+                    });
+                });
+            }
+            
+            addHoverEffects();
+
+            function addTechIconEffects() {
+                const techIcons = document.querySelectorAll('.tech-tag');
+                
+                techIcons.forEach(icon => {
+                    icon.addEventListener('mouseenter', function() {
+                        this.style.transform = 'scale(1.1) rotate(2deg)';
+                        this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                        this.style.color = 'white';
+                    });
+                    
+                    icon.addEventListener('mouseleave', function() {
+                        this.style.transform = 'scale(1) rotate(0deg)';
+                        this.style.background = '';
+                        this.style.color = '';
+                    });
+                });
+            }
+            
+            addTechIconEffects();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-pulse-slow');
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.stats-counter').forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+    </script>
+</body>
 </html>
-
